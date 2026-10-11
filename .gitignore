@@ -1,0 +1,45 @@
+# --- PSP plugin build outputs ---
+*.o
+*.a
+*.elf
+*.prx
+*.PBP
+PARAM.SFO
+*.map
+
+# --- PC client build ---
+build/
+out/
+pc/build/
+CMakeUserPresets.json
+CMakeCache.txt
+CMakeFiles/
+vcpkg_installed/
+*.exe
+*.dll
+*.pdb
+*.ilk
+*.obj
+*.lib
+*.exp
+
+# --- IDEs ---
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+
+# --- Captures, dumps, logs from test runs ---
+captures/
+*.raw
+*.wav
+*.log
+
+# --- OS junk ---
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# --- Python ---
+__pycache__/

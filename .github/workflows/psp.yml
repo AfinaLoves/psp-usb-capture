@@ -1,0 +1,33 @@
+name: psp-plugin
+
+on:
+  push:
+    paths:
+      - "psp/**"
+      - "common/**"
+      - ".github/workflows/psp.yml"
+  pull_request:
+    paths:
+      - "psp/**"
+      - "common/**"
+      - ".github/workflows/psp.yml"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: pspdev/pspdev:latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Build pspcap.prx
+        run: |
+          rev=$(echo "$GITHUB_SHA" | cut -c1-7)
+          make -C psp GIT_REV="$rev"
+          ls -l psp/pspcap.prx
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: pspcap-prx
+          path: psp/pspcap.prx
+          if-no-files-found: error

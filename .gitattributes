@@ -1,0 +1,10 @@
+# Normalize text files; the plugin is built on Linux (CI), so keep LF in sources.
+* text=auto eol=lf
+
+# Windows-only scripts keep CRLF
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+*.png binary
+*.prx binary
