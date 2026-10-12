@@ -18,6 +18,12 @@ It's two pieces:
 
 ## Does it work?
 
+## Does it work?
+
+[![Sans fight recorded with pspcap](https://img.youtube.com/vi/TW87dOylzV8/maxresdefault.jpg)](https://youtu.be/TW87dOylzV8)
+
+*Full Sans fight on PSP 3000, captured with pspcap (screen + audio, no camera).*
+
 Yes, with caveats. What I've actually tested:
 
 | | |
